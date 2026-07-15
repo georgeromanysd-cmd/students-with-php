@@ -38,7 +38,6 @@
         $name = $student[0];
         $grade = $student[1];
 
-        // Determine Letter Grade
         if ($grade >= 90) {
             $letter = "A";
         } elseif ($grade >= 80) {
@@ -57,17 +56,14 @@
                 <td>$letter</td>
               </tr>";
 
-        // Count Passed & Failed
         if ($grade >= 60) {
             $passed++;
         } else {
             $failed++;
         }
 
-        // Sum Grades
         $totalGrades += $grade;
 
-        // Find Highest Grade
         if ($grade > $highestGrade) {
             $highestGrade = $grade;
             $topStudent = $name;
